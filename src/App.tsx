@@ -1,7 +1,8 @@
 import Alert from "./components/Alert";
-import ListGroup from "./components/ListGroup";
+import ListGroup from "./components/ListGroup/ListGroup";
 import Button from "./components/Button";
 import { useState } from "react";
+import './App.css'
 let items = ["NewYork", "London", "Paris", "Tokyo"];
 const handleSelectedItems = (item: string) => {
     console.log(item); // [ 'NewYork', 'London' ]
