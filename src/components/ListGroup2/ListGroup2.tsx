@@ -17,6 +17,7 @@ const ListItems = styled.li<ListItemsProps>`
     padding: 5px 0;
     background: ${(props) => (props.active ? "blue" : "none")};
 `;
+
 interface ListGroupProps {
     items: string[];
     heading: string;
