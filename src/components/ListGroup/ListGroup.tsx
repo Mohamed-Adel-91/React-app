@@ -11,7 +11,7 @@ function ListGroup(props: ListGroupProps) {
     const [selectedIndex, setSelectedIndex] = useState(-1);
     return (
         <>
-            <BsFillCalendarDateFill color="red" size="40" />
+            <BsFillCalendarDateFill color="#0d6efd" size="40" />
             <h1>{props.heading}</h1>
             {props.items.length === 0 && <p>No Items Found</p>}
             <ul className={[styles["list-group"], styles.container].join(" ")}>

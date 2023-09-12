@@ -15,7 +15,7 @@ interface ListItemsProps {
 const ListItems = styled.li<ListItemsProps>`
     font-size: 20px;
     padding: 5px 0;
-    background: ${(props) => (props.active ? "red" : "none")};
+    background: ${(props) => (props.active ? "#0d6efd" : "none")};
 `;
 
 interface ListGroupProps {
