@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import "./ListGroup2.css";
+import "./ListGroup2.css";
 import styled from "styled-components";
 
 const List = styled.ul`

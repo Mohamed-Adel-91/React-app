@@ -1,7 +1,7 @@
 import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup/ListGroup";
 import ListGroup2 from "./components/ListGroup2/ListGroup2";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 import { useState } from "react";
 import "./App.css";
 let items = ["NewYork", "London", "Paris", "Tokyo"];
