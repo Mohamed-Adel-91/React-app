@@ -1,10 +1,6 @@
 import { useState } from "react";
-import "./ListGroup2.css";
+// import "./ListGroup2.css";
 import styled from "styled-components";
-
-interface ListItemsProps {
-    active: boolean;
-}
 
 const List = styled.ul`
     list-style: none;
@@ -12,10 +8,14 @@ const List = styled.ul`
     margin-top: 15px;
 `;
 
+interface ListItemsProps {
+    active: boolean;
+}
+
 const ListItems = styled.li<ListItemsProps>`
     font-size: 20px;
     padding: 5px 0;
-    background: ${(props) => (props.active ? "blue" : "none")};
+    background: ${(props) => (props.active ? "red" : "none")};
 `;
 
 interface ListGroupProps {
