@@ -6,7 +6,7 @@ import { useState } from "react";
 import "./App.css";
 let items = ["NewYork", "London", "Paris", "Tokyo"];
 const handleSelectedItems = (item: string) => {
-    console.log(item); // [ 'NewYork', 'London' ]
+    console.log(item);
 };
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
                 </Alert>
             )}
             <br />
-            <Button color="success" onClickButton={() => setAlertVisible(true)}>
+            <Button color="primary" onClick={() => setAlertVisible(true)}>
                 Button test
             </Button>
             <br />
