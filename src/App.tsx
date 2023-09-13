@@ -2,6 +2,7 @@ import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup/ListGroup";
 import ListGroup2 from "./components/ListGroup2/ListGroup2";
 import Button from "./components/Button/Button";
+import Like from "./components/Like/Like";
 import { useState } from "react";
 import "./App.css";
 let items = ["NewYork", "London", "Paris", "Tokyo"];
@@ -23,6 +24,8 @@ function App() {
                 Button test
             </Button>
             <br />
+            <Like onClick={()=> console.log("Like Clicked")}/>
+            <br/>
             <ListGroup
                 items={items}
                 heading="Cities"
