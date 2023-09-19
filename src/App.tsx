@@ -5,6 +5,7 @@ import Button from "./components/Button/Button";
 import Like from "./components/Like/Like";
 import { useState } from "react";
 import "./App.css";
+
 let items = ["NewYork", "London", "Paris", "Tokyo"];
 const handleSelectedItems = (item: string) => {
     console.log(item);
@@ -12,8 +13,28 @@ const handleSelectedItems = (item: string) => {
 
 function App() {
     const [alertVisible, setAlertVisible] = useState(false);
+    // const [isApproved, setApproved] = useState(true);
+    // const [firstName, setFirstName] = useState('');
+    // const [lastName, setLastName] = useState('');
+    // const fullName = firstName + ' ' + lastName;
+    const [person, setPerson]  = useState({
+        firstName : '',
+        lastName : '',
+    })
+    const [isLoading, setLoading] = useState('');
+    
+    let count = 0;
+    const handleClick = () => {
+        setAlertVisible(true);
+        count++;
+        console.log(alertVisible);
+        console.log(count);
+    }
     return (
         <div>
+            {/* {fullName} */}
+            <button onClick={handleClick}>Show</button>
+            <br/>
             {alertVisible && (
                 <Alert onClose={() => setAlertVisible(false)}>
                     This is an <span>alert</span> box!
