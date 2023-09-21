@@ -6,6 +6,8 @@ import Like from "./components/Like/Like";
 import { useState } from "react";
 import produce from "immer";
 import "./App.css";
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
 
 let items = ["NewYork", "London", "Paris", "Tokyo"];
 const handleSelectedItems = (item: string) => {
@@ -92,9 +94,14 @@ function App() {
         );
     };
 
+    // Handle sharing state between component
+    const [cartItems, setCartItems] = useState(["Product 1", "Product 2"]);
+
     return (
         <div>
-            {/* {fullName} */}
+            <NavBar cartItemsCount={cartItems.length} />
+            <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+            <br />
             {bugs.map((bug) => (
                 <p key={bug.id}>
                     {bug.title} {bug.fixed ? "Fixed" : "New"}
@@ -119,6 +126,7 @@ function App() {
                 </Alert>
             )}
             <br />
+            {/* {fullName} */}
             <Button color="primary" onClick={() => setAlertVisible(true)}>
                 Button test
             </Button>
