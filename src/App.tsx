@@ -97,8 +97,21 @@ function App() {
     // Handle sharing state between component
     const [cartItems, setCartItems] = useState(["Product 1", "Product 2"]);
 
+    // Ex1 on useState
+    const [game, setGame] = useState({
+        id: 1,
+        player: {
+            names: "John",
+        },
+    });
+    const handleGame = () => {
+        setGame({ ...game, player: { ...game.player, names: "pop" } });
+        console.log(game);
+    };
     return (
         <div>
+            <button onClick={handleGame}>game</button>
+            <br />
             <NavBar cartItemsCount={cartItems.length} />
             <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
             <br />
