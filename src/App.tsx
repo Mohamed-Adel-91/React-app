@@ -9,6 +9,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import ExpandableText from "./components/ExpandableText";
+import Form from "./components/Form";
 
 let items = ["NewYork", "London", "Paris", "Tokyo"];
 const handleSelectedItems = (item: string) => {
@@ -137,6 +138,7 @@ function App() {
 
     return (
         <>
+            <Form />
             <div>
                 <button onClick={handleCart}>cart</button>
                 <br />
