@@ -9,7 +9,9 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import ExpandableText from "./components/ExpandableText";
-import Form from "./components/Form";
+import FormUseRef from "./components/FormUseRef";
+import FormUseState from "./components/FormUseState";
+import ReactHookForm from "./components/ReactHookForm";
 
 let items = ["NewYork", "London", "Paris", "Tokyo"];
 const handleSelectedItems = (item: string) => {
@@ -138,13 +140,24 @@ function App() {
 
     return (
         <>
-            <Form />
+            <h2>ReactHookForm</h2>
+            <ReactHookForm />
+            <h2>FormUseState</h2>
+            <FormUseState />
+            <h2>FormUseRef</h2>
+            <FormUseRef />
             <div>
-                <button onClick={handleCart}>cart</button>
+                <button onClick={handleCart} className="btn btn-primary">
+                    cart
+                </button>
                 <br />
-                <button onClick={handlePizza}>pizza</button>
+                <button onClick={handlePizza} className="btn btn-primary">
+                    pizza
+                </button>
                 <br />
-                <button onClick={handleGame}>game</button>
+                <button onClick={handleGame} className="btn btn-primary">
+                    game
+                </button>
                 <br />
                 <NavBar cartItemsCount={cartItems.length} />
                 <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
@@ -154,18 +167,28 @@ function App() {
                         {bug.title} {bug.fixed ? "Fixed" : "New"}
                     </p>
                 ))}
-                <button onClick={handleBugs}>fix bugs</button>
+                <button onClick={handleBugs} className="btn btn-primary">
+                    fix bugs
+                </button>
                 <br />
                 {tags.length}
-                <button onClick={handleTags}>tags</button>
+                <button onClick={handleTags} className="btn btn-primary">
+                    tags
+                </button>
                 <br />
                 {drink.adds.Qnt}
-                <button onClick={handleQnt}>Qnt</button>
+                <button onClick={handleQnt} className="btn btn-primary">
+                    Qnt
+                </button>
                 <br />
                 {drink.price}
-                <button onClick={handlePrice}>price</button>
+                <button onClick={handlePrice} className="btn btn-primary">
+                    price
+                </button>
                 <br />
-                <button onClick={handleClick}>Show</button>
+                <button onClick={handleClick} className="btn btn-primary">
+                    Show
+                </button>
                 <br />
                 {alertVisible && (
                     <Alert onClose={() => setAlertVisible(false)}>

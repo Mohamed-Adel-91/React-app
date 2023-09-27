@@ -12,7 +12,9 @@ const Cart = ({ cartItems, onClear }: Props) => {
                     <li key={item}>{item}</li>
                 ))}
             </ul>
-            <button onClick={onClear}>Clear</button>
+            <button onClick={onClear} className="btn btn-primary">
+                Clear
+            </button>
         </>
     );
 };

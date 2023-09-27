@@ -18,7 +18,7 @@ const ExpandableText = ({ children, maxChars = 100 }: Props) => {
         <>
             <p>
                 {text}...
-                <button onClick={handelExtend}>
+                <button onClick={handelExtend} className="btn btn-primary">
                     {isExtend ? "Less" : "More"}
                 </button>
             </p>
