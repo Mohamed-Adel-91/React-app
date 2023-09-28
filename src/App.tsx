@@ -12,6 +12,7 @@ import ExpandableText from "./components/ExpandableText";
 import FormUseRef from "./components/FormUseRef";
 import FormUseState from "./components/FormUseState";
 import ReactHookForm from "./components/ReactHookForm";
+import FormZod from "./components/FormZod";
 
 let items = ["NewYork", "London", "Paris", "Tokyo"];
 const handleSelectedItems = (item: string) => {
@@ -140,6 +141,8 @@ function App() {
 
     return (
         <>
+            <h2>FormZod</h2>
+            <FormZod />
             <h2>ReactHookForm</h2>
             <ReactHookForm />
             <h2>FormUseState</h2>
